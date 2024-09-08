@@ -1,5 +1,4 @@
 /* eslint-disable camelcase */
-import { Groups } from '@screens/groups'
 import { ThemeProvider } from 'styled-components'
 
 import {
@@ -11,6 +10,7 @@ import {
 import theme from '@theme/index'
 import { Loading } from '@components/loading'
 import { StatusBar } from 'react-native'
+import { Routes } from 'src/routes'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,7 +20,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar barStyle="default" translucent />
-      {fontsLoaded ? <Groups /> : <Loading />}
+      {fontsLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   )
 }
